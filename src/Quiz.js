@@ -98,19 +98,25 @@ function Quiz() {
               {(score / Questions.length) * 100}% correct
             </Progress>
 
-            <Progress animated bar color="danger" value={incorrect/Questions.length*100}>
-              {incorrect/Questions.length*100}% Incorrect
+            <Progress
+              animated
+              bar
+              color="danger"
+              value={(incorrect / Questions.length) * 100}
+            >
+              {(incorrect / Questions.length) * 100}% Incorrect
             </Progress>
           </Progress>
-          <h1 className="display-3">
+          <h1 className="">
             {" "}
-            You scored {score} out of {Questions.length}
-            <p className="lead text-center">
-              <Link className=" btn btn-dark" to="/">
-                Take the Quiz again
-              </Link>
-            </p>
+            Score = {score}<br></br>
+            Total Questions = {Questions.length}
           </h1>
+          <Container className="lead text-center mt-4">
+            <Link className=" btn btn-dark" to="/">
+              Take the Quiz again
+            </Link>
+          </Container>
         </Jumbotron>
       ) : (
         <Container className="col-sm-8 border-top border-bottom  border-primary">
