@@ -1,4 +1,6 @@
 
 # Quiz-app
-Quiz application using React.js
+- Quiz application using React.js
+- Reactstrap is used for styling
+
 
